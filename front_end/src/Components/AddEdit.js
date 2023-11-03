@@ -12,7 +12,7 @@ function AddEdit() {
     const [categoryData, setCategoryData] = useState([]);
 
     //const [categoriesList, setCategoriesList] = useState([]);
-    //const [buttonSubmitted, setButtonSubmitted] = useState(false);
+    const [buttonSubmitted, setButtonSubmitted] = useState(false);
 
     const addCategoryData = (data, index) => {
         console.log(data)
@@ -91,6 +91,7 @@ function AddEdit() {
       
     const onClickEventSubmit = async () => {
         try {
+            setButtonSubmitted(true);
             if (categoryData.length > 0) {
                 // Check if any category_name is empty
                 const hasEmptyCategoryName = categoryData.some(category => {
@@ -217,6 +218,7 @@ function AddEdit() {
                                     addCategoryData={addCategoryData}
                                     fetchCategoryList = {fetchCategoryList}
                                     removeCategoryForm = {removeCategoryForm}
+                                    buttonSubmitted = {buttonSubmitted}
                                 />
                         )
                         })   

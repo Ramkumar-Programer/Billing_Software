@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import "../../CSS/BrandWeight.css"
 
-function BrandWeight({handleAddBrandName, brandData, index}) {
+function BrandWeight({handleAddBrandName, brandData, index, buttonSubmitted}) {
     
     const [brandWeight, setBrandWeight] = useState("");
     const [brandWeightType, setBrandWeightType] = useState("");
@@ -9,6 +9,13 @@ function BrandWeight({handleAddBrandName, brandData, index}) {
     //const [brandData, setBrandData] = useState({});
     const [brandWeightFormView, setBrandWeightFormView] = useState(true);
 
+    useEffect(() =>
+      {
+        if(buttonSubmitted)
+        {
+          sendData();
+        }
+    });
     const sendData = () =>
     {
         const value = 
@@ -22,7 +29,7 @@ function BrandWeight({handleAddBrandName, brandData, index}) {
     }
 
   return (
-    <div className = "addBrandForm" onBlur={sendData}>
+    <div className = "addBrandForm" >
         <div className={`addBrandFormTop ${brandWeightFormView ? '' : 'minus'}`}>
            <p>X</p>
             <p>Brand_Details</p>

@@ -3,7 +3,7 @@ import "../../CSS/Category.css"
 import scal from "sweetalert2"
 import BrandWeight from './BrandWeight';
 
-function Category({addCategoryData, fetchCategoryList, catIndex, removeCategoryForm, data})
+function Category({addCategoryData, fetchCategoryList, catIndex, removeCategoryForm, data, buttonSubmitted})
 {
     const [selectedOption, setSelectedOption] = useState('');
     const [categoryName, setCategoryName] = useState("");
@@ -12,6 +12,10 @@ function Category({addCategoryData, fetchCategoryList, catIndex, removeCategoryF
 
     useEffect(() =>
     {
+      if(buttonSubmitted)
+      {
+        sendData();
+      }
         initializeCatData();
     },[data]);
 
@@ -143,7 +147,7 @@ function Category({addCategoryData, fetchCategoryList, catIndex, removeCategoryF
     }
   
     return (
-      <div className='category' onBlur={sendData}>
+      <div className='category'>
           <div className='catCancel' onClick={()=>removeCategoryForm(catIndex)}>X</div>
 
           <div className='addBrand'>
@@ -183,7 +187,7 @@ function Category({addCategoryData, fetchCategoryList, catIndex, removeCategoryF
           {
             brandList.map((brandData, i) => {
               return(
-                   <BrandWeight className="brandWeightComponent" handleAddBrandName = {handleAddBrandName} brandData = {brandData} index = {i}/>
+                   <BrandWeight className="brandWeightComponent" handleAddBrandName = {handleAddBrandName} brandData = {brandData} index = {i} buttonSubmitted/>
                   );
             })
           }

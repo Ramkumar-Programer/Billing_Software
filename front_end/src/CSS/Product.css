@@ -1,0 +1,65 @@
+.productForm
+{
+    height: 350px;
+    width: 260px;
+    margin-bottom: 30px;
+    margin-right: 10px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: aquamarine;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    box-shadow: 2px 4px 8px rgb(131, 138, 131);
+}
+.productForm .title
+{
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(91, 51, 51);
+}
+.productForm .productCancel
+{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -25px;
+    margin-right: 10px;
+
+}
+.productForm .productCancel button
+{
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    background-color: rgb(220, 49, 49);
+    border-radius: 20px;
+    font-size: 17px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.productForm select,
+.productForm input
+{
+    
+    height: 40px;
+    margin-bottom: 10px;
+    outline: none;
+    border-radius: 10px;
+    border: 2px solid green;
+}
+
+.productForm select
+{
+    width: 100%;
+    padding-left: 40px;
+    cursor: pointer;
+}
+
+.productForm input
+{
+    width: 94%;
+    padding-left: 10px;
+}

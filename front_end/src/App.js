@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState} from 'react';
+import TopBar from './Components/TopBar';
+import SideBar from './Components/SideBar';
+import Home from './Components/Home';
+import AddEdit from './Components/AddEdit';
 
 function App() {
+    
+  const [toggle, setToggle] = useState(false);
+  const [activeItem, setActiveItem] = useState('Add');
+
+  const test = () => {
+    setToggle(false);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <TopBar toggle={toggle} setToggle={setToggle} />
+
+      <SideBar toggle={toggle} activeItem = {activeItem} setActiveItem = {setActiveItem}/>
+
+      <div className={`bodyContent ${toggle ? 'show' : ''}`} onClick={test}>
+          {activeItem === 'Home' ? <Home /> : null}
+          {activeItem === 'Add' ? <AddEdit /> : null}
+          {activeItem === 'Edit' ? <AddEdit /> : null}
+      </div>
     </div>
   );
 }

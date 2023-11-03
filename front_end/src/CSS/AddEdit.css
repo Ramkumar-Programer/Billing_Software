@@ -1,0 +1,188 @@
+.addEdit 
+{
+    width: 95%;
+    overflow: hidden;
+}
+
+.addEdit .topContentAddEdit
+{
+    position: fixed;
+    z-index: 9999;
+    height: 30px;
+    width: calc(100% - 35%);
+    margin-left: 20px;
+    display: flex;
+    padding-left: 10px;
+    padding-top: 2px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.addEdit .topContentAddEdit .userWiseList
+{
+    width: 155px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.addEdit .topContentAddEdit .userWiseList span
+{
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.addEdit .topContentAddEdit .userWiseList .dateActive
+{
+    border-bottom: 4px solid rgb(86, 84, 84);
+    font-style: oblique;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 20%;
+    transition: 0.3s;
+}
+
+.addEdit .topContentAddEdit .buttonAddCategory
+{
+    position: absolute;
+    right: 0;
+}
+.addEdit .topContentAddEdit .buttonAddCategory button
+{
+    background: none;
+    border: none;
+    color: white;
+    height: 30px;
+    font-size:medium;
+    background-color: rgb(69, 69, 212);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.addEdit .bodyContentAddEdit
+{
+    margin-left: 25px;
+    margin-right: 20px;
+    margin-top: 80px;
+}
+.addEdit .bodyContentAddEdit .categories,
+.addEdit .bodyContentAddEdit .productList
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    align-items: center;
+    width: 90%;
+}
+.addEdit .bodyContentAddEdit .productList
+{
+    padding-bottom: 50px;
+}
+.addEdit .bodyContentAddEdit .categories .allCategories,
+.addEdit .bodyContentAddEdit .categories .allProductList
+{
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px;
+}
+.AddEditButton
+{
+    position: absolute;
+    margin-top: 10px;
+    bottom: 10px;
+    width: 100%;
+}
+
+.AddEditButton button
+{
+    height: 30px;
+    background-color: rgb(76, 206, 100);
+    color: aliceblue;
+    font-size: larger;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.addEdit .bodyContentAddEdit .product
+{
+    display: flex;
+    justify-content: center;
+    min-width: 200px;
+    margin: 20px;
+}
+
+.addEdit .bodyContentAddEdit .product .inputBoxes
+{
+    position: relative;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(370px,1fr));
+}
+
+.addEdit .bodyContentAddEdit .product .inputBoxes .inputBox
+{
+    width: 70%;
+}
+.addEdit .bodyContentAddEdit .product .inputBoxes .boxInputBox
+{
+    width: 80%;
+}
+
+@media (max-width: 500px)
+{
+    .addEdit .bodyContentAddEdit .product
+    {
+        margin-left: 100px;
+    }
+    .addEdit .topContentAddEdit
+    {
+        width: 80%;
+    }
+    .addEdit .topContentAddEdit .buttonAddCategory
+    {
+        position: absolute;
+        right: 50px;
+    }
+    .addEdit .topContentAddEdit .buttonAddCategory button
+    {
+        font-size: medium;
+    }
+}
+/* @media (max-width: 1450px)
+{
+    .addEdit .topContentAddEdit{
+        /* width: 60%; 
+    }
+} 
+@media (max-width: 950px)
+{
+    .addEdit .topContentAddEdit{
+        width: 55%;
+    }
+}
+@media (max-width: 900px)
+{
+    .addEdit .topContentAddEdit{
+        width: 85%;
+    }
+} */
+@media (max-width: 765px)
+{
+    /* .addEdit .topContentAddEdit{
+        width: 75%;
+    } */
+    .addEdit .bodyContentAddEdit
+    {
+        margin-left: 15px;
+    }
+    .addEdit .topContentAddEdit .buttonAddCategory
+    {
+        position: absolute;
+        right: 10px;
+    }
+} 

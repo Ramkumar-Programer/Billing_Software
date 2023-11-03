@@ -1,0 +1,79 @@
+.addBrandForm .addBrandFormTop
+{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background-color: rgb(245, 190, 118);
+    margin-top: 13px;
+    height: 35px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    transition: border-radius 0.6s ease;
+ }
+ .addBrandForm .addBrandFormTop.minus{
+    border-radius: 10px;
+ }
+.addBrandForm .addBrandFormTop p
+{
+    position: relative;
+    top: -11px;
+    margin-left: 20px;
+    color: rgb(83, 73, 73);
+    font-weight: 600;
+}
+.addBrandForm .addBrandFormTop .plusMinus
+{
+    top: -18px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 25px;
+}
+
+.addBrandForm .addBrandFormBody
+{
+    position: relative;
+    padding: 10px;
+    display: block;
+    background-color: rgb(150, 129, 104);
+    max-height: 70px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    border-radius: 0 0 10px 10px;
+} 
+
+.addBrandForm .addBrandFormBody.minus {
+    padding : 0;
+    max-height: 0;
+}
+
+.addBrandForm .addBrandFormBody .addBrandName,
+.addBrandForm .addBrandFormBody .brandWeight .brandWeightValue,
+.addBrandForm .addBrandFormBody .brandWeight .selectWeightType
+{
+    height: 25px;
+    outline: none;
+    background: none;
+    border: none;
+    width: 87%;
+    border: 2px solid rgb(154, 94, 94);
+    background-color: antiquewhite;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.addBrandForm .addBrandFormBody .brandWeight
+{
+    display: flex;
+    margin-top: 10px;
+}
+.addBrandForm .addBrandFormBody .brandWeight .brandWeightValue
+{
+    width: 100px;
+    margin-right: 10px;
+}
+.addBrandForm .addBrandFormBody .brandWeight .selectWeightType
+{
+    height: 30px;
+    width: 62px;
+    padding-left: 3px;
+}

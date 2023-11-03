@@ -1,0 +1,233 @@
+.topBar 
+{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    z-index: 999;
+    background-color: #000000;
+    width: 100%;
+}
+
+.toggle
+{
+    display: none;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 60px;
+    height: 80px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.toggle span{
+    display: none;
+    position: absolute;
+    left: 30px;
+    width: 30px;
+    height: 4px;
+    background: rgb(255, 255, 255);
+    border-radius: 4px;
+    transition: 0.5s;
+}
+
+ .toggle span:nth-child(1)
+{
+    transform: translateY(-15px);
+    width: 20px;
+    left: 30px;
+}
+
+.toggle span:nth-child(2)
+{
+    transform: translateY(15px);
+    width: 15px;
+    left:30px;
+} 
+
+.toggle.active span:nth-child(1)
+{
+    width: 30px;
+    transform: translateY(0px) rotate(45deg);
+}
+
+.toggle.active span:nth-child(2)
+{
+    width: 30px;
+    transform: translateY(0px) rotate(315deg);
+}
+
+.toggle.active span:nth-child(3)
+{
+    transform: translateX(60px);
+}
+
+.productName .title 
+{
+    margin-left: -80px;
+    font-size: 24px;
+    font-weight: bold;
+}
+  
+.DateAndTime 
+{
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.DateAndTime .time
+{
+    margin-left: 10px;
+}
+  
+.topBarSearchBox 
+{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    width: calc(100% - 20px);
+    max-width: 550px; 
+    height: 30px;
+}
+  
+.searchIcon
+{
+    color: #000;
+    cursor: pointer;
+}
+  
+.topBarSearchBox input[type="text"] 
+{
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    padding-left: 10px;
+    margin-left: 5px;
+}
+  
+.profileDetails
+{
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+  
+.profileDetails .nameRole 
+{
+    margin-right: 10px;
+}
+  
+.profileDetails .name 
+{
+    font-size: 14px;
+}
+  
+.profileDetails .role 
+{
+    font-size: 12px;
+    font-weight: normal;
+    opacity: 0.8;
+}
+  
+.profileDetails .profilePhoto .image
+{
+    width: 43px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+
+
+
+@media (max-width: 1230px) 
+{
+    .DateAndTime 
+    {
+        display: none;
+    }
+    .topBarSearchBox {
+        width: 400px; 
+      }
+}
+
+@media (max-width: 970px) 
+{
+    .topBarSearchBox {
+        width: 300px; 
+      }
+}
+@media (max-width: 900px) 
+{
+    .toggle span
+    {
+        display: block;
+    }
+    .topBar .title
+    {
+        margin-left: 10px;
+        font-size: 18px;
+    }
+}
+ 
+@media (max-width: 800px) 
+{
+    .topBarSearchBox {
+        width: 230px; 
+      }
+}
+
+
+@media (max-width: 768px) 
+{
+
+    .topBar
+    {
+        height: 130px;
+    }
+
+    .profileDetails .nameRole 
+    {
+        display: none;
+    }
+
+    .profileDetails .profilePhoto
+    {
+        position: relative;
+        top: 0px;
+    }
+
+    .topBarSearchBox 
+    {
+        position: absolute;
+        left: 25px;
+        top: 45%;
+        width: 600px;
+    }
+}
+  
+@media (max-width: 620px) 
+{
+    .topBarSearchBox 
+    {
+        width: 500px;
+    }
+}
+
+@media (max-width: 570px) 
+{
+    .topBarSearchBox 
+    {
+        width: 320px;
+    }
+}

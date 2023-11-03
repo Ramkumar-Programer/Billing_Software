@@ -1,0 +1,24 @@
+{
+    "CategoryName" : "Test1",
+    "subCategory" : 
+    [
+        {
+            "CategoryName" : "subTest1",
+            "subCategory" :
+            [
+                {
+                    "CategoryName" : "subsubTest1",
+                    "subCategory" : null
+                },
+                {
+                    "CategoryName" : "subsubTest2",
+                    "subCategory" : null
+                },
+            ]
+        },
+        {
+            "CategoryName" : "subTest2",
+            "subCategory" : null,
+        }
+    ] 
+}
